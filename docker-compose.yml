@@ -25,9 +25,12 @@ services:
 
   web:
     container_name: bobarr-web
+    build:
+      context: ./packages/web
+      args:
+        - WEB_UI_API_URL=${WEB_UI_API_URL}
     env_file: .env
-    image: iam4x/bobarr-web:latest
-    command: yarn start
+    command:  yarn start
     restart: unless-stopped
     ports:
       - 3000:3000
@@ -42,7 +45,7 @@ services:
 
   redis:
     container_name: bobarr-redis
-    image: bitnami/redis:5.0.6
+    image: bitnami/redis:7.2.4
     env_file: .env
     restart: unless-stopped
     volumes:

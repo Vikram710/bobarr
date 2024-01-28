@@ -44,7 +44,7 @@ after_start() {
 
 if [[ $args == 'start' ]]; then
   stop_bobarr
-  $COMPOSE_VERSION up --force-recreate -d
+  $COMPOSE_VERSION up --build --force-recreate -d
   after_start
 elif [[ $args == 'start:vpn' ]]; then
   stop_bobarr

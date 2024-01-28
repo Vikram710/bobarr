@@ -11,6 +11,9 @@ COPY package*.json yarn.lock ./
 RUN yarn --network-timeout 1000000
 COPY . .
 
+ARG WEB_UI_API_URL
+ENV WEB_UI_API_URL $WEB_UI_API_URL
+
 RUN yarn build
 
 HEALTHCHECK --start-period=30s \
