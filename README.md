@@ -74,7 +74,6 @@ If you want to enforce all torrent traffic through a VPN:
 
 * Go to http://localhost:9117
 * Add indexer and follow the steps
-* Also set [FlareSolverr](https://github.com/Jackett/Jackett#configuring-flaresolverr) url to `http://flaresolverr:8191` in jackett configuration
 
 ### Bobarr configuration
 
@@ -120,7 +119,6 @@ Check the [CHANGELOG](https://github.com/iam4x/bobarr/blob/master/CHANGELOG.md) 
 * Bobarr background jobs http://localhost:4000/jobs
 * Jackett http://localhost:9117
 * Transmission http://localhost:9091
-* FlareSolverr http://localhost:8191
 
 ## Development
 
